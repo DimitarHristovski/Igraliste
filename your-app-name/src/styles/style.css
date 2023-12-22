@@ -1,0 +1,340 @@
+.g-btn {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 240.08, 191.25) 3.9%,
+    rgb(239.06, 200.98, 144.43) 28.93%,
+    rgb(252.88, 210.05, 146.46) 51.27%,
+    rgba(240.39, 198.55, 73.16, 0.42) 83.65%,
+    rgb(212, 175, 55) 100%
+  );
+  border: 1.5px solid;
+  border-color: var(--light-grey);
+  border-radius: 15px;
+  box-shadow: 0px 0px 4.5px #c2c2c2;
+  height: 51px;
+  left: 32px;
+  top: 290px;
+  width: 100%;
+}
+.bold-underline {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.bold-underline-2 {
+  border-bottom: 2px solid #8a8328;
+}
+.ic-size {
+  height: 25px;
+}
+.text-size-1 {
+  font-size: 10px;
+}
+.text-size-2 {
+  font-size: 15px;
+}
+.text-size-3 {
+  font-size: 20px;
+}
+.border-0 {
+  border: none;
+}
+.border-t {
+  border-top: 1px solid black;
+}
+.custom-border {
+  border: 1px solid gray;
+}
+.z-index {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.box {
+  width: 100%;
+  position: relative;
+  animation: slideRightToLeft 15s linear infinite;
+}
+
+.announcement-bar {
+  white-space: nowrap;
+  display: inline-block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+@keyframes slideRightToLeft {
+  100% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+}
+
+.pinkish-circle {
+  background-color: #ffdbdb;
+
+  background: linear-gradient(
+    180deg,
+    rgb(255, 219, 219) 0.03%,
+    rgb(252.88, 252.88, 252.88) 54.27%,
+    rgb(252.88, 252.88, 252.88) 64.48%,
+    rgb(255, 219, 219) 88.62%
+  );
+  border-radius: 50%;
+  bottom: -50px;
+  border: 1.25px solid;
+  border-color: #232220;
+  height: 270px;
+  position: relative;
+  width: 270px;
+}
+.pinkish-circle:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 221, 221) 0.03%,
+    rgb(246, 227, 227) 54.27%,
+    rgb(246, 227, 227) 64.48%,
+    rgb(246, 227, 227) 88.62%
+  );
+}
+.pink-circle {
+  background-color: #ffdbdb;
+
+  background: linear-gradient(
+    180deg,
+    rgb(255, 219, 219) 0.03%,
+    rgb(252.88, 252.88, 252.88) 54.27%,
+    rgb(252.88, 252.88, 252.88) 64.48%,
+    rgb(255, 219, 219) 88.62%
+  );
+  border-radius: 50%;
+  bottom: -50px;
+  border: 1.25px solid;
+  border-color: #232220;
+  height: 270px;
+  position: relative;
+  width: 270px;
+}
+.pink-circle:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 240.08, 191.25) 3.9%,
+    rgb(239.06, 200.98, 144.43) 28.93%,
+    rgb(252.88, 210.05, 146.46) 51.27%,
+    rgba(240.39, 198.55, 73.16, 0.42) 83.65%,
+    rgb(212, 175, 55) 100%
+  );
+}
+.mr-6 {
+  margin-right: 140px;
+  transform: rotate(320deg);
+}
+.custom-border-right {
+  border-right: 1px solid #000;
+}
+.custom-border-right:nth-child(even) {
+  border-right: none;
+}
+.lh-base {
+  line-height: 1.5rem;
+}
+
+/* .btn-custom {
+  background-color: rgba(255, 246, 246, 1); 
+  
+} */
+
+.image-register {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.btn-custom {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 1px solid rgba(255, 246, 246, 1);
+}
+.border-custom {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 1px solid #000000;
+}
+.border-black-custom {
+  border: 1px solid #000000;
+  border-radius: 40%;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.btn-custom {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 1px solid rgba(255, 246, 246, 1);
+}
+.btn-custom-login {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 3px solid rgba(255, 219, 219, 1);
+}
+.added-to-cart {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 1px solid rgba(255, 246, 246, 1);
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.btn-custom:hover {
+  background-color: rgba(255, 246, 246, 1);
+  color: #000000;
+  border: 1px solid rgba(255, 246, 246, 1);
+}
+
+.btn-custom,
+.added-to-cart {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-custom:hover .initial-text {
+  display: none;
+}
+
+.btn-custom .hover-text,
+.added-to-cart .hover-text,
+.added-to-cart .added-text {
+  display: none;
+}
+.ul-style {
+  list-style-type: disc !important;
+}
+
+.btn-custom:hover .hover-text {
+  display: inline;
+}
+
+.added-to-cart .added-text {
+  display: inline;
+}
+
+.added-to-cart .initial-text {
+  display: none;
+}
+
+/* Custom CSS to make the modal full-width */
+.modal-100w {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Ensure the modal covers the entire height of the screen */
+.modal-100w .modal-dialog {
+  height: 100vh;
+  margin: 0;
+}
+
+.carousel-control-next-icon {
+  background-image: url("/images/icons/right.svg"); /* Black color for the carousel control arrows */
+}
+.carousel-control-prev-icon {
+  background-image: url("/images/icons/left.svg"); /* Black color for the carousel control arrows */
+}
+.carousel-control-prev,
+.carousel-control-next {
+  color: #000; /* Black color for the carousel control arrows */
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.emojistar,
+.thumbnail-img {
+  width: 50px;
+  height: 50px;
+}
+
+:root {
+  --red: #ff835e;
+  --orange: #fbc26c;
+  --yellow: #fcff81;
+  --green: #b9e5a4;
+  --blue: #75d7f0;
+  --cream: #ffdbdb;
+  --pink: #ea97ff;
+  --gray: #d9d9d9;
+  --white: #ffffff;
+  --black: #232221;
+}
+.scroll {
+  overflow-y: auto;
+}
+.color-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sticky-buttons {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  padding: 15px;
+}
+.mb-6 {
+  margin-bottom: 230px;
+}
+
+.log-color {
+  text-decoration: underline;
+  color: #8a8328;
+}
+
+.modal-backdrop {
+  pointer-events: none;
+}
+
+.banner-top,
+.text-display {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.text-display {
+  font-size: 20px;
+}
+.banner-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.ml-6 {
+  margin-left: 110px;
+}
+.bold-text {
+  font-weight: bold;
+}
+
+.iconsizing {
+  height: 46.6px;
+  width: 46.6px;
+}
