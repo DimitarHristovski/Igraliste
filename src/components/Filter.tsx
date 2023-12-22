@@ -120,7 +120,9 @@ const Filter: React.FC<FilterProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/filter");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/filter"
+        );
 
         if (response.ok) {
           const jsonData: FilterData = await response.json();

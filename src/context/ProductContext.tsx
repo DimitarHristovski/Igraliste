@@ -48,13 +48,13 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
   });
   useEffect(() => {
     const fetchProductData = async () => {
-      const data = await fetch("http://localhost:5000/products").then(
-        (response) => response.json()
-      );
+      const data = await fetch(
+        "https://protected-reaches-74137-663edc83df86.herokuapp.com/products"
+      ).then((response) => response.json());
       setProducts(data);
-      const giftCardData = await fetch("http://localhost:5000/giftcards").then(
-        (response) => response.json()
-      );
+      const giftCardData = await fetch(
+        "https://protected-reaches-74137-663edc83df86.herokuapp.com/giftcards"
+      ).then((response) => response.json());
       setGiftCards(giftCardData);
       setLoading(false);
     };
@@ -68,7 +68,6 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
   const cartProducts = products.filter((product) =>
     cartProductIds.includes(product.id)
   );
-
 
   const toggleFavorite = (productId: number) => {
     setFavoriteProductsIds((prevIds) => {

@@ -14,7 +14,9 @@ const About: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/aboutUs");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/aboutUs"
+        );
         if (response.ok) {
           const jsonData: AboutData = await response.json();
           setAboutData(jsonData);

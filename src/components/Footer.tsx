@@ -15,7 +15,9 @@ const Footer: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/footerData");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/footerData"
+        );
         const jsonData: FooterData = await response.json();
         setData(jsonData);
       } catch (error) {

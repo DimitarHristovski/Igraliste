@@ -12,7 +12,9 @@ const Contact: React.FC<ContactProps> = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/contactInfo");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/contactInfo"
+        );
         if (response.ok) {
           const jsonData: ContactInfo = await response.json();
           setContactInfo(jsonData);

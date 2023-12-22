@@ -10,7 +10,9 @@ const FAQ: React.FC<FAQProps> = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/faq");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/faq"
+        );
         if (response.ok) {
           const jsonData: FAQProps = await response.json();
           setFaqData(jsonData.items);

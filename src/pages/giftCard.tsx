@@ -13,7 +13,7 @@ interface GiftCardsData {
   giftCards: GiftCard[];
 }
 
-const GiftCard: React.FC<GiftCardsData> = ({ giftCards }) => {
+const GiftCard: React.FC<any> = ({ giftCards }) => {
   const { toggleCartGiftCard } = useProductContext();
 
   const [addedToCart, setAddedToCart] = useState<{ [key: string]: boolean }>(
@@ -91,7 +91,7 @@ const GiftCard: React.FC<GiftCardsData> = ({ giftCards }) => {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="d-flex justify-content-around flex-column align-items-center">
-            {giftCards.map((giftcard) => (
+            {giftCards.map((giftcard: any) => (
               <div
                 key={giftcard.id}
                 onClick={() => handleAddToCart(giftcard.id)}
@@ -112,7 +112,9 @@ const GiftCard: React.FC<GiftCardsData> = ({ giftCards }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch("http://localhost:5000/giftcards");
+  const response = await fetch(
+    "https://protected-reaches-74137-663edc83df86.herokuapp.com/giftcards"
+  );
   const data: GiftCard[] = await response.json();
 
   return {

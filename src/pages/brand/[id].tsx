@@ -28,7 +28,9 @@ const BrandDetails: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/BrandData");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/BrandData"
+        );
         if (response.ok) {
           const jsonData: BrandData = await response.json();
           setProductsData(jsonData);
@@ -82,7 +84,7 @@ const BrandDetails: React.FC = () => {
           )}
           {section.questions && (
             <ul>
-              {section.questions.map((question:any, idx:any) => (
+              {section.questions.map((question: any, idx: any) => (
                 <li key={idx} className="ul-style ml-5 p-2">
                   {question}
                 </li>

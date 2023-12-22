@@ -13,7 +13,9 @@ const RelatedProducts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/products");
+        const response = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/products"
+        );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

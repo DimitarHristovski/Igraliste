@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 import { BannerItem } from "../types/PageDetailsTypes";
- 
+
 const AnimateBox: React.FC = () => {
   const [bannerData, setBannerData] = useState<BannerItem[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resBanner = await fetch("http://localhost:5000/banner_content");
+        const resBanner = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/banner_content"
+        );
         const data: BannerItem[] = await resBanner.json();
         setBannerData(data);
       } catch (error) {
@@ -18,7 +20,6 @@ const AnimateBox: React.FC = () => {
 
     fetchData();
   }, []);
-
 
   return (
     <div className="box">

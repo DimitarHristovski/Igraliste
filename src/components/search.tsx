@@ -30,7 +30,9 @@ const Search: React.FC = () => {
   };
 
   const debounceSearch = debounce(async (inputValue: string) => {
-    const response = await fetch(`http://localhost:5000/products`);
+    const response = await fetch(
+      `https://protected-reaches-74137-663edc83df86.herokuapp.com/products`
+    );
     const data: Product[] = await response.json();
 
     const filteredResults = data.filter((product) =>
@@ -40,7 +42,7 @@ const Search: React.FC = () => {
     setSearchResults(filteredResults);
   }, 300);
   const handleCardClick = () => {
-    setShowSearch(false); 
+    setShowSearch(false);
   };
   return (
     <>
@@ -86,7 +88,7 @@ const Search: React.FC = () => {
                   className="col-6 mb-4 "
                   onClick={handleCardClick}
                 >
-                  <Link href={product.link} >
+                  <Link href={product.link}>
                     <span>
                       <Card
                         image={product.image}

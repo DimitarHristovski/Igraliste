@@ -214,7 +214,9 @@ const ProductDetail: NextPage<ProductDetailProps> = ({ products }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const response = await fetch("http://localhost:5000/products");
+    const response = await fetch(
+      "https://protected-reaches-74137-663edc83df86.herokuapp.com/products"
+    );
     const products: Product[] = await response.json();
 
     const paths = products.map((product) => ({
@@ -238,7 +240,9 @@ export const getStaticProps: GetStaticProps<any> = async ({ params }: any) => {
   try {
     const productId = params?.id;
     // console.log("Product ID:", productId);
-    const response = await fetch(`http://localhost:5000/products/${productId}`);
+    const response = await fetch(
+      `https://protected-reaches-74137-663edc83df86.herokuapp.com/products/${productId}`
+    );
     const products: Product = await response.json();
 
     // console.log("Product data:", products);

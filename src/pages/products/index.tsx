@@ -246,7 +246,9 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
 export default Index;
 
 export async function getStaticProps() {
-  const productsResponse = await fetch("http://localhost:5000/products");
+  const productsResponse = await fetch(
+    "https://protected-reaches-74137-663edc83df86.herokuapp.com/products"
+  );
   const productsData: Product[] = await productsResponse.json();
 
   return {

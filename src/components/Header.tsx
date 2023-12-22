@@ -18,7 +18,9 @@ const Header: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resData = await fetch("http://localhost:5000/categories");
+        const resData = await fetch(
+          "https://protected-reaches-74137-663edc83df86.herokuapp.com/categories"
+        );
         const data: Category[] = await resData.json();
         setDbData(data);
 
