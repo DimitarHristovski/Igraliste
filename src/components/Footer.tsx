@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
     const storedIsLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-   // console.log(storedIsLoggedIn);
+    // console.log(storedIsLoggedIn);
     if (storedIsLoggedIn !== isLoggedIn) {
       setLoggedIn(storedIsLoggedIn);
     }
-  }, [isLoggedIn]);
+  }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -57,14 +57,10 @@ const Footer: React.FC = () => {
                 <a href={data.links.faq.url}>{data.links.faq.text}</a>
               </p>
               {isLoggedIn ? (
-                <Link href="/MyProfile" >
-                  Мој Профил
-                </Link>
+                <Link href="/MyProfile">Мој Профил</Link>
               ) : (
                 <span>
-                  <Link href="/register" >
-                    Регистрирај се/логирај се
-                  </Link>
+                  <Link href="/register">Регистрирај се/логирај се</Link>
                 </span>
               )}
 

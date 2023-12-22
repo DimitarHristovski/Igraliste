@@ -21,13 +21,16 @@ const PassChange: React.FC<any> = ({ setView }: any) => {
       return;
     }
 
-    localStorage.setItem("Password", newPassword);
+    // Ensure we're in a client-side environment before accessing localStorage
+    if (typeof window !== "undefined") {
+      localStorage.setItem("Password", newPassword);
 
-    if (formData) {
-      const updatedUserData = { ...formData, password: newPassword };
-      updateFormData(updatedUserData);
+      if (formData) {
+        const updatedUserData = { ...formData, password: newPassword };
+        updateFormData(updatedUserData);
 
-      localStorage.setItem("userData", JSON.stringify(updatedUserData));
+        localStorage.setItem("userData", JSON.stringify(updatedUserData));
+      }
     }
 
     alert("Password changed successfully");

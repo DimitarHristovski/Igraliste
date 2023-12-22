@@ -24,18 +24,21 @@ const Register4: React.FC = () => {
         const result = reader.result;
         if (typeof result === "string") {
           updateImage(result);
-          localStorage.setItem("Image", result);
+          if (typeof window !== "undefined") {
+            localStorage.setItem("Image", result);
+          }
         }
       };
       reader.readAsDataURL(file);
     }
   };
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    localStorage.setItem("formData", JSON.stringify(formData));
-    localStorage.setItem("image", image || "");
-   // console.log(formData, image);
-
+    if (typeof window !== "undefined") {
+      localStorage.setItem("formData", JSON.stringify(formData));
+      localStorage.setItem("image", image || "");
+    }
     router.push("/MyProfile");
   };
   return (

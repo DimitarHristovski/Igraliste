@@ -16,25 +16,27 @@ const OrderForm = () => {
   const [email, setEmail] = useState("");
 
   const handleClick = () => {
-    if (!isDataPopulated) {
-      const storedUserDataString = localStorage.getItem("formData");
-      if (storedUserDataString) {
-        const storedUserData = JSON.parse(storedUserDataString);
-        setName(storedUserData.name || "");
-        setLastName(storedUserData.lastname || "");
-        setAddress(storedUserData.address || "");
-        setPhone(storedUserData.phoneNumber || "");
-        setEmail(storedUserData.email || "");
+    if (typeof window !== "undefined") {
+      if (!isDataPopulated) {
+        const storedUserDataString = localStorage.getItem("formData");
+        if (storedUserDataString) {
+          const storedUserData = JSON.parse(storedUserDataString);
+          setName(storedUserData.name || "");
+          setLastName(storedUserData.lastname || "");
+          setAddress(storedUserData.address || "");
+          setPhone(storedUserData.phoneNumber || "");
+          setEmail(storedUserData.email || "");
+        }
+      } else {
+        // Reset form fields to initial state
+        setName("");
+        setLastName("");
+        setAddress("");
+        setPhone("");
+        setEmail("");
       }
-    } else {
-      // Reset form fields to initial state
-      setName("");
-      setLastName("");
-      setAddress("");
-      setPhone("");
-      setEmail("");
+      setIsDataPopulated(!isDataPopulated);
     }
-    setIsDataPopulated(!isDataPopulated);
   };
   const handleBackButtonClick = () => {
     setView("SuccessOrder");
@@ -147,7 +149,8 @@ const OrderForm = () => {
                   Naracaj
                 </button>
                 <Link href="/">
-                <p className="w-50 p-3 text-center">otkazi</p></Link>
+                  <p className="w-50 p-3 text-center">otkazi</p>
+                </Link>
               </div>
             </div>
           </>

@@ -11,26 +11,30 @@ const MyProfile = () => {
     useAuth();
 
   useEffect(() => {
-    const storedImage = localStorage.getItem("image");
-    const storedUserData = localStorage.getItem("formData");
+    if (typeof window !== "undefined") {
+      const storedImage = localStorage.getItem("image");
+      const storedUserData = localStorage.getItem("formData");
 
-    if (storedImage) {
-      updateImage(storedImage);
-    }
+      if (storedImage) {
+        updateImage(storedImage);
+      }
 
-    if (storedUserData) {
-      updateFormData(JSON.parse(storedUserData));
+      if (storedUserData) {
+        updateFormData(JSON.parse(storedUserData));
+      }
     }
   }, []);
 
   const handleSaveButtonClick = () => {
-    localStorage.setItem("image", image || "");
-    router.push("/login");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("image", image || "");
+      router.push("/login");
 
-    localStorage.setItem("formData", JSON.stringify(formData));
-    // console.log(formData, image);
+      localStorage.setItem("formData", JSON.stringify(formData));
+      // console.log(formData, image);
 
-    alert("Data saved!");
+      alert("Data saved!");
+    }
   };
 
   const handleLogoutButtonClick = () => {

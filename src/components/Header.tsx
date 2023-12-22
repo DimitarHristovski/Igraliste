@@ -10,11 +10,11 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const storedIsLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-   // console.log(storedIsLoggedIn);
+    // console.log(storedIsLoggedIn);
     if (storedIsLoggedIn !== isLoggedIn) {
       setLoggedIn(storedIsLoggedIn);
     }
-  }, [isLoggedIn]);
+  }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -102,7 +102,9 @@ const Header: React.FC = () => {
                               subcategory.name
                             )}`}
                           >
-                            <span className="dropdown-item">{subcategory.name}</span>
+                            <span className="dropdown-item">
+                              {subcategory.name}
+                            </span>
                           </Link>
                         ) : (
                           <Link
@@ -110,7 +112,9 @@ const Header: React.FC = () => {
                               subcategory.name
                             )}`}
                           >
-                            <span className="dropdown-item">{subcategory.name}</span>
+                            <span className="dropdown-item">
+                              {subcategory.name}
+                            </span>
                           </Link>
                         )}
                       </li>

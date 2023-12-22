@@ -67,27 +67,29 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [image, setImage] = useState<string | null>(null);
 
   useEffect(() => {
-    const storedLoginStatus = localStorage.getItem("isLoggedIn");
-    if (storedLoginStatus === "true") {
-      setLoggedIn(true);
-    }
+    if (typeof window !== "undefined") {
+      const storedLoginStatus = localStorage.getItem("isLoggedIn");
+      if (storedLoginStatus === "true") {
+        setLoggedIn(true);
+      }
 
-    const storedUserData = localStorage.getItem("userData");
-    if (storedUserData) {
-      setUserData(JSON.parse(storedUserData));
-    }
+      const storedUserData = localStorage.getItem("userData");
+      if (storedUserData) {
+        setUserData(JSON.parse(storedUserData));
+      }
 
-    const storedImage = localStorage.getItem("image");
-    if (storedImage) {
-      setImage(storedImage);
+      const storedImage = localStorage.getItem("image");
+      if (storedImage) {
+        setImage(storedImage);
+      }
     }
   }, []);
 
   const login = (email: string, password: string) => {
     setLoggedIn(true);
-    localStorage.setItem("isLoggedIn", "true");
-
-   
+    if (typeof window !== "undefined") {
+      localStorage.setItem("isLoggedIn", "true");
+    }
   };
   useEffect(() => {
     const storedEmail = localStorage.getItem("email");
@@ -97,49 +99,46 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       setEmail(storedEmail);
       setPassword(storedPassword);
     }
-    const storedLoginStatus = localStorage.getItem("isLoggedIn");
-    if (storedLoginStatus === "true") {
-      setLoggedIn(true);
-    }
   }, []);
   const handleLogin = () => {
-    
-    const storedDataString = localStorage.getItem("formData");
-   
-    if (storedDataString !== null) {
-      
-      const storedData = JSON.parse(storedDataString);
+    if (typeof window !== "undefined") {
+      const storedDataString = localStorage.getItem("formData");
 
-      
-      if (typeof storedData === "object" && storedData !== null) {
-        const { email: storedEmail, password: storedPassword } = storedData;
+      if (storedDataString !== null) {
+        const storedData = JSON.parse(storedDataString);
 
-        //console.log("Entered Email:", email);
-       // console.log("Entered Password:", password);
-       // console.log("Stored Email:", storedEmail);
-       // console.log("Stored Password:", storedPassword);
+        if (typeof storedData === "object" && storedData !== null) {
+          const { email: storedEmail, password: storedPassword } = storedData;
 
-        if (email === storedEmail && password === storedPassword) {
-          setLoggedIn(true);
-          router.push("/MyProfile");
-          localStorage.setItem("isLoggedIn", "true");
+          //console.log("Entered Email:", email);
+          // console.log("Entered Password:", password);
+          // console.log("Stored Email:", storedEmail);
+          // console.log("Stored Password:", storedPassword);
 
-        //  console.log("User is logged in");
+          if (email === storedEmail && password === storedPassword) {
+            setLoggedIn(true);
+            router.push("/MyProfile");
+            localStorage.setItem("isLoggedIn", "true");
+
+            //  console.log("User is logged in");
+          } else {
+            //   console.log("Invalid login credentials");
+          }
         } else {
-       //   console.log("Invalid login credentials");
+          //   console.log("Stored data is not a valid object");
         }
       } else {
-     //   console.log("Stored data is not a valid object");
+        //console.log("No user data found in localStorage");
       }
-    } else {
-      //console.log("No user data found in localStorage");
     }
   };
   const logout = () => {
     setLoggedIn(false);
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userData");
-    localStorage.removeItem("image");
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("userData");
+      localStorage.removeItem("image");
+    }
   };
 
   const updateFormData = (newFormData: FormData) => {
@@ -148,9 +147,10 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   const updateImage = (newImage: string | null) => {
     setImage(newImage);
-    localStorage.setItem("image", newImage || "");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("image", newImage || "");
+    }
   };
-  console.log("test", userData);
 
   return (
     <AuthContext.Provider

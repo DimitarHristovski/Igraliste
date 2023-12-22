@@ -52,7 +52,10 @@ const Order: React.FC = () => {
   // console.log("Cart Products:", cartProductIds);
   //console.log("Cart giftCards:", cartGiftCardIds);
   const clearLocalStorage = () => {
-    localStorage.clear();
+    if (typeof window !== 'undefined') {
+      localStorage.clear();
+      // Optionally, update application state to reflect the cleared storage
+    }
   };
   return (
     <div className="container">
