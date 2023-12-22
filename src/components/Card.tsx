@@ -1,7 +1,7 @@
 import React from "react";
 import { CardProps } from "../types/PageDetailsTypes";
 
-const Card: React.FC<CardProps> = ({ image, name, price }) => {
+const Card: React.FC<any> = ({ image, name, price }) => {
   return (
     <div className="col-12">
       <img src={image} alt={name} className="d-block w-100 img-fluid m-1" />
