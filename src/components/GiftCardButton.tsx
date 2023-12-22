@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import { GiftCardButtonProps } from "../types/PageDetailsTypes";
 
-const GiftCardButton: React.FC<GiftCardButtonProps> = ({
-  id,
-  price,
-  addedToCart,
-}) => {
+const GiftCardButton: React.FC<any> = ({ id, price, addedToCart }) => {
   return (
     <button
       type="button"

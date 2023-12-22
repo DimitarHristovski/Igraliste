@@ -234,9 +234,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 };
 
-export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
-  params,
-}) => {
+export const getStaticProps: GetStaticProps<any> = async ({ params }: any) => {
   try {
     const productId = params?.id;
     // console.log("Product ID:", productId);

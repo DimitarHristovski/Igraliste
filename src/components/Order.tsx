@@ -29,8 +29,8 @@ const Order: React.FC = () => {
 
   useEffect(() => {
     const calculateTotalPrice = () => {
-      const productTotal = +cartProducts.reduce((total, product) => {
-        return total + product.price;
+      const productTotal = cartProducts.reduce((total, product) => {
+        return total + Number(product.price);
       }, 0);
 
       const giftCardTotal = +cartgiftCards.reduce((total, giftCard) => {
@@ -78,7 +78,6 @@ const Order: React.FC = () => {
                 price={giftCard.price}
                 id={giftCard.id}
                 addedToCart={false}
-                handleAddToCart={function (buttonId: string): void {}}
               />
             </a>
           </div>

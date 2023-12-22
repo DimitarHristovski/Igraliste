@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-import Card from "./Card"; 
+import Card from "./Card";
 import Link from "next/link";
 import { Product } from "../types/ProductTypes";
-
-
 
 interface SliderProps {
   products: Product[];
 }
 
-const ProductSlider: React.FC<SliderProps> = ({
-  products: initialProducts,
-}) => {
+const ProductSlider: React.FC<any> = ({ products: initialProducts }) => {
   const [products, setProducts] = useState<Product[]>(initialProducts);
 
   useEffect(() => {
@@ -37,7 +33,7 @@ const ProductSlider: React.FC<SliderProps> = ({
     <Carousel>
       {products.map((product) => (
         <Carousel.Item key={product.id}>
-          <Link href={product.link} >
+          <Link href={product.link}>
             <span className="text-size-3">
               <Card
                 image={product.image}

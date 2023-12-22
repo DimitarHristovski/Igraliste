@@ -2,7 +2,7 @@ import { useAuth } from "@/context/FormDataContext";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const PassChange: React.FC = ({ setView }) => {
+const PassChange: React.FC<any> = ({ setView }: any) => {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -32,7 +32,7 @@ const PassChange: React.FC = ({ setView }) => {
 
     alert("Password changed successfully");
   };
- // console.log("Current password in userData:", formData?.password);
+  // console.log("Current password in userData:", formData?.password);
   return (
     <div className="container-fluid rounded">
       {" "}

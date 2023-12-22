@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Pagination = ({ onPageChange, totalPages }) => {
+const Pagination = ({ onPageChange, totalPages }: any) => {
   const visiblePages = 5;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -13,7 +13,7 @@ const Pagination = ({ onPageChange, totalPages }) => {
     return pages;
   };
 
-  const handlePageClick = (page) => {
+  const handlePageClick = (page: any) => {
     setCurrentPage(page);
     onPageChange(page);
   };

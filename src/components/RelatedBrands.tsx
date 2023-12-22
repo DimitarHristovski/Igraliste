@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Brand } from "../types/BrandTypes";
 import Pagination from "./Pagination";
-const RelatedBrands = ({ products }) => {
+const RelatedBrands = ({ products }: any) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Adjust as needed
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = (newPage: any) => {
     setCurrentPage(newPage);
   };
 
@@ -19,7 +19,7 @@ const RelatedBrands = ({ products }) => {
     <div className="row">
       <h3 className="mx-4 p-2">Парчиња од Брендот</h3>
       <div className="col-12 d-flex flex-wrap">
-        {currentItems.map((product) => (
+        {currentItems.map((product: any) => (
           <div key={product.id} className="col-6">
             <Link href={`/products/${product.id}`}>
               <span className="text-size-3">

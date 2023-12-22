@@ -1,7 +1,6 @@
 import { GetStaticProps } from "next";
 import React, { useState } from "react";
 import GiftCardButton from "@/components/GiftCardButton";
-import { GiftCard, GiftCardsData } from "../types/PageDetailsTypes";
 import { useProductContext } from "@/context/ProductContext";
 
 interface GiftCard {
@@ -15,7 +14,7 @@ interface GiftCardsData {
 }
 
 const GiftCard: React.FC<GiftCardsData> = ({ giftCards }) => {
-  const { toggleCartGiftCard } = useProductContext(); 
+  const { toggleCartGiftCard } = useProductContext();
 
   const [addedToCart, setAddedToCart] = useState<{ [key: string]: boolean }>(
     {}
@@ -113,7 +112,7 @@ const GiftCard: React.FC<GiftCardsData> = ({ giftCards }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch("http://localhost:5000/giftcards"); 
+  const response = await fetch("http://localhost:5000/giftcards");
   const data: GiftCard[] = await response.json();
 
   return {

@@ -28,7 +28,7 @@ const MyProfile = () => {
     router.push("/login");
 
     localStorage.setItem("formData", JSON.stringify(formData));
-   // console.log(formData, image);
+    // console.log(formData, image);
 
     alert("Data saved!");
   };

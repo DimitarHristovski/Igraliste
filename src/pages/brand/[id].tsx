@@ -2,16 +2,14 @@ import Pagination from "@/components/Pagination";
 import RelatedBrands from "@/components/RelatedBrands";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BrandData, BrandDataSection } from "../types/PageDetailsTypes";
+import { BrandData, BrandDataSection } from "../../types/PageDetailsTypes";
 import { useRouter } from "next/router";
 import { useProductContext } from "@/context/ProductContext";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 const BrandDetails: React.FC = () => {
   const [productsData, setProductsData] = useState<BrandData | null>(null);
-  const [filteredProducts, setFilteredProducts] = useState<Array<ProductType>>(
-    []
-  );
+  const [filteredProducts, setFilteredProducts] = useState<Array<any>>([]);
   const router = useRouter();
   const { id } = router.query;
   const { products } = useProductContext();
@@ -69,7 +67,7 @@ const BrandDetails: React.FC = () => {
         )}
         <h1 className="m-2 p-2 ">{id}</h1>
       </div>
-      {productsData.content.map((section, index) => (
+      {productsData.content.map((section: any, index) => (
         <div key={section.id || index}>
           {section.image && (
             <>
@@ -84,7 +82,7 @@ const BrandDetails: React.FC = () => {
           )}
           {section.questions && (
             <ul>
-              {section.questions.map((question, idx) => (
+              {section.questions.map((question:any, idx:any) => (
                 <li key={idx} className="ul-style ml-5 p-2">
                   {question}
                 </li>
@@ -95,7 +93,6 @@ const BrandDetails: React.FC = () => {
         </div>
       ))}
       <RelatedBrands products={filteredProducts} />
-      
     </div>
   );
 };

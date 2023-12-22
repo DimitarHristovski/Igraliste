@@ -27,7 +27,7 @@ const RelatedProducts = () => {
 
     fetchData();
   }, []);
-  const handlePageChange = (newPage) => {
+  const handlePageChange = (newPage: any) => {
     setCurrentPage(newPage);
   };
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -51,11 +51,13 @@ const RelatedProducts = () => {
             </Link>
           </div>
         ))}
-        <div className="m-auto"> <Pagination
-          onPageChange={handlePageChange}
-          totalPages={Math.ceil(products.length / itemsPerPage)}
-        /></div>
-       
+        <div className="m-auto">
+          {" "}
+          <Pagination
+            onPageChange={handlePageChange}
+            totalPages={Math.ceil(products.length / itemsPerPage)}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 
+interface FilterProps {
+  setView: any;
+  setAppliedFilters: any;
+  data: any;
+  appliedFilters: any;
+}
 interface FilterData {
   categories: CategoryData[];
   brands: BrandData[];
@@ -36,7 +42,7 @@ interface PriceData {
   name: string;
 }
 
-const Filter: React.FC = ({
+const Filter: React.FC<FilterProps> = ({
   setView,
   setAppliedFilters,
   data,
@@ -79,32 +85,34 @@ const Filter: React.FC = ({
     });
   };
 
-  let countItemsByType = (type) => {
+  let countItemsByType = (type: any) => {
     let filteredForCount = data;
-    appliedFilters.forEach((filter) => {
+    appliedFilters.forEach((filter: any) => {
       if (filter.type === "size") {
         filteredForCount = filteredForCount.filter(
-          (item) => item.size && item.size.includes(filter.value)
+          (item: any) => item.size && item.size.includes(filter.value)
         );
       } else if (filter.type === "priceRange") {
         const range = filter.value;
         if (range.min !== undefined && range.max !== undefined) {
           filteredForCount = filteredForCount.filter(
-            (item) => item.price >= range.min && item.price <= range.max
+            (item: any) => item.price >= range.min && item.price <= range.max
           );
         } else if (range.min !== undefined) {
           filteredForCount = filteredForCount.filter(
-            (item) => item.price >= range.min
+            (item: any) => item.price >= range.min
           );
         }
       } else if (filter.type !== "type") {
         filteredForCount = filteredForCount.filter(
-          (item) => item[filter.type] === filter.value
+          (item: any) => item[filter.type] === filter.value
         );
       }
     });
 
-    const count = filteredForCount.filter((item) => item.type === type).length;
+    const count = filteredForCount.filter(
+      (item: any) => item.type === type
+    ).length;
 
     return count;
   };
@@ -142,7 +150,7 @@ const Filter: React.FC = ({
     //console.log("Performing search:", searchInput);
   };
 
-  function parsePriceRange(rangeStr) {
+  function parsePriceRange(rangeStr: any) {
     if (rangeStr.includes(" - ")) {
       const [minStr, maxStr] = rangeStr.split(" - ");
       const min = parseInt(minStr);
@@ -156,10 +164,10 @@ const Filter: React.FC = ({
     }
     return {};
   }
-  const isPriceRangeApplied = (priceRangeName) => {
+  const isPriceRangeApplied = (priceRangeName: any) => {
     const range = parsePriceRange(priceRangeName);
 
-    return appliedFilters.some((filter) => {
+    return appliedFilters.some((filter: any) => {
       if (filter.type !== "priceRange") return false;
 
       const appliedRange = filter.value;
@@ -171,9 +179,9 @@ const Filter: React.FC = ({
     });
   };
 
-  const isColorSelected = (colorValue) => {
+  const isColorSelected = (colorValue: any) => {
     return appliedFilters.some(
-      (filter) => filter.type === "color" && filter.value === colorValue
+      (filter: any) => filter.type === "color" && filter.value === colorValue
     );
   };
   //console.log(filterData?.colors);
@@ -216,7 +224,7 @@ const Filter: React.FC = ({
                     id={category.name}
                     className="p-2"
                     checked={appliedFilters.some(
-                      (filter) =>
+                      (filter: any) =>
                         filter.type === "type" && filter.value === category.name
                     )}
                     onChange={() =>
@@ -246,7 +254,7 @@ const Filter: React.FC = ({
                     id={brand.name}
                     className="p-2"
                     checked={appliedFilters.some(
-                      (filter) =>
+                      (filter: any) =>
                         filter.type === "brand" && filter.value === brand.name
                     )}
                     onChange={() =>
@@ -273,7 +281,7 @@ const Filter: React.FC = ({
                     id={accessory.name}
                     className="p-2"
                     checked={appliedFilters.some(
-                      (filter) =>
+                      (filter: any) =>
                         filter.type === "type" &&
                         filter.value === accessory.name
                     )}
@@ -301,7 +309,7 @@ const Filter: React.FC = ({
                     id={size.name}
                     className="p-2"
                     checked={appliedFilters.some(
-                      (filter) =>
+                      (filter: any) =>
                         filter.type === "size" && filter.value === size.name
                     )}
                     onChange={() =>

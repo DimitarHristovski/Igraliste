@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Order from "../components/Order";
 import Favorites from "../components/Favorites";
-import { useCartContext } from "@/context/CartContext";
 import { useProductContext } from "@/context/ProductContext";
 
 type ActiveView = "Order" | "Favorites";
 
 const Shop: React.FC = () => {
-  
-  const { favoriteProductsIds ,cartGiftCardIds,
+  const {
+    favoriteProductsIds,
+    cartGiftCardIds,
 
-    cartProductIds,} = useProductContext();
+    cartProductIds,
+  } = useProductContext();
   const [view, setView] = useState<ActiveView>("Order");
 
   const handleViewChange = (newView: ActiveView) => {
@@ -18,7 +19,7 @@ const Shop: React.FC = () => {
   };
   const combinedCartCount = cartProductIds.length + cartGiftCardIds.length;
   const combinedFavoritesCount = favoriteProductsIds.length;
- // console.log("Combined Cart Count:", combinedCartCount);
+  // console.log("Combined Cart Count:", combinedCartCount);
   return (
     <div className="container ">
       <div className="row ">

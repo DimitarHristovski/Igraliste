@@ -24,12 +24,12 @@ interface IndexProps {
 }
 const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
   const [view, setView] = useState<ActiveView>("index");
-  const [sortOption, setSortOption] = useState("najnovo");
+  const [sortOption, setSortOption] = useState<any>("najnovo");
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [combinedData, setCombinedData] = useState<Product[]>(products);
-  const [appliedFilters, setAppliedFilters] = useState([]);
-  const [filteredData, setFilteredData] = useState([products]);
+  const [loading, setLoading] = useState<any>(false);
+  const [combinedData, setCombinedData] = useState<any>(products);
+  const [appliedFilters, setAppliedFilters] = useState<any>([]);
+  const [filteredData, setFilteredData] = useState<any>([products]);
   //console.log(filteredData);
   const handleBackButtonClick = () => {
     setView("Filter");
@@ -51,7 +51,7 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const sortedData = combinedData.sort((a, b) => {
+        const sortedData = combinedData.sort((a: any, b: any) => {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
 
@@ -88,41 +88,47 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
     "var(--white)": "white",
     "var(--black)": "black",
   };
+  type ColorName = keyof typeof colorMapping;
+
   useEffect(() => {
     if (appliedFilters.length === 0) {
       setFilteredData(combinedData);
       return;
     }
 
-    const filtersByType = appliedFilters.reduce((acc, filter) => {
+    const filtersByType = appliedFilters.reduce((acc: any, filter: any) => {
       (acc[filter.type] = acc[filter.type] || []).push(filter.value);
       return acc;
     }, {});
 
-    let currentFilteredData = combinedData.filter((item) => {
+    let currentFilteredData = combinedData.filter((item: any) => {
       for (let filterType in filtersByType) {
         if (filterType === "size") {
           if (
             !item.size ||
-            !filtersByType[filterType].some((size) => item.size.includes(size))
+            !filtersByType[filterType].some((size: any) =>
+              item.size.includes(size)
+            )
           ) {
             return false;
           }
         } else if (filterType === "priceRange") {
-          let matchesPriceRange = filtersByType[filterType].some((range) => {
-            if (range.min !== undefined && range.max !== undefined) {
-              return item.price >= range.min && item.price <= range.max;
-            } else if (range.min !== undefined) {
-              return item.price >= range.min;
+          let matchesPriceRange = filtersByType[filterType].some(
+            (range: any) => {
+              if (range.min !== undefined && range.max !== undefined) {
+                return item.price >= range.min && item.price <= range.max;
+              } else if (range.min !== undefined) {
+                return item.price >= range.min;
+              }
+              return false;
             }
-            return false;
-          });
+          );
 
           if (!matchesPriceRange) return false;
         } else if (filterType === "color") {
           // Handling color filters
           let colorFilterValues = filtersByType[filterType].map(
-            (color) => colorMapping[color] || color
+            (color: ColorName) => colorMapping[color] || color
           );
           if (!colorFilterValues.includes(item.color)) {
             return false;
@@ -144,12 +150,14 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
   useEffect(() => {
     const queryParams = router.query;
     if (Object.keys(queryParams).length > 0) {
-      const newFilters = Object.entries(queryParams).map(([key, value]) => ({
-        type: key,
-        value: Array.isArray(value)
-          ? value.map((v) => decodeURIComponent(v))
-          : decodeURIComponent(value),
-      }));
+      const newFilters = Object.entries(queryParams).map(
+        ([key, value]: any) => ({
+          type: key,
+          value: Array.isArray(value)
+            ? value.map((v) => decodeURIComponent(v))
+            : decodeURIComponent(value),
+        })
+      );
       setAppliedFilters(newFilters);
     }
   }, [router.query]);
@@ -201,7 +209,7 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
 
           <div className="row">
             {currentItems
-              .sort((a, b) => {
+              .sort((a: any, b: any) => {
                 const dateA = new Date(a.date);
                 const dateB = new Date(b.date);
 
@@ -213,7 +221,7 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
 
                 return 0;
               })
-              .map((item) => (
+              .map((item: any) => (
                 <div key={item.id} className="col-6">
                   <Link href={`/products/${item.id}`}>
                     <Card
