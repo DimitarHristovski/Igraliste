@@ -65,7 +65,7 @@ const ProductDetail: NextPage<ProductDetailProps> = ({ products }) => {
   const incrementQuantity = () => {
     setQuantity(quantity + 1);
   };
- // console.log(products);
+  // console.log(products);
   const decrementQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -75,12 +75,9 @@ const ProductDetail: NextPage<ProductDetailProps> = ({ products }) => {
     toggleFavorite(products.id);
   };
 
- // console.log(products.price, toggleFavorite);
- // console.log(!isFavorite, products.id);
+  // console.log(products.price, toggleFavorite);
+  // console.log(!isFavorite, products.id);
 
-  if (!products) {
-    return <div>Loading...</div>;
-  }
   const [imageSrc, setImageSrc] = useState("/images/icons/heart.png");
 
   const handleClick = () => {
@@ -104,6 +101,9 @@ const ProductDetail: NextPage<ProductDetailProps> = ({ products }) => {
     { label: "Vintage облека", href: "/products" },
     { label: `${products.name}` },
   ];
+  if (!products) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className=" container-fluid my-5">
       <Breadcrumbs items={breadcrumbItems} />
@@ -239,11 +239,11 @@ export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
 }) => {
   try {
     const productId = params?.id;
-   // console.log("Product ID:", productId);
+    // console.log("Product ID:", productId);
     const response = await fetch(`http://localhost:5000/products/${productId}`);
     const products: Product = await response.json();
 
-   // console.log("Product data:", products);
+    // console.log("Product data:", products);
 
     return {
       props: {

@@ -51,12 +51,19 @@ export default function Document() {
           <script
             src="https://kit.fontawesome.com/a076d05399.js"
             crossOrigin="anonymous"
+            async
           />
           {/* Include jQuery */}
-          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" />
+          <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            async
+          />
 
           {/* Include Bootstrap JavaScript */}
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" />
+          <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            async
+          />
         </>
       </Head>
       <body className="d-md-none d-md-block">
