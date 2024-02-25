@@ -1,29 +1,5 @@
 
-:root {
-	--black: rgba(35, 34, 33, 1);
-	--dark-grey: rgba(102, 101, 96, 1);
-	--fancy-olive: rgba(138, 131, 40, 1);
-	--light-grey: rgba(194, 194, 194, 1);
-	--light-ribbon-pink: rgba(255, 246, 246, 1);
-	--navigation-text-font-family: "CormorantGaramond-Medium", Helvetica;
-	--navigation-text-font-size: 25px;
-	--navigation-text-font-style: normal;
-	--navigation-text-font-weight: 500;
-	--navigation-text-letter-spacing: -0.2750000059604645px;
-	--navigation-text-line-height: 150%;
-	--pinc-green: rgba(80, 78, 33, 1);
-	--red-alert: rgba(255, 91, 41, 1);
-	--ribbon-pink: rgba(255, 219, 219, 1);
-	--small-titlles-font-family: "CormorantInfant-Regular", Helvetica;
-	--small-titlles-font-size: 32px;
-	--small-titlles-font-style: normal;
-	--small-titlles-font-weight: 400;
-	--small-titlles-letter-spacing: -0.35200000762939454px;
-	--small-titlles-line-height: 150%;
-	--very-light-grey: rgba(245, 245, 245, 1);
-	--white: rgba(253, 253, 253, 1);
-  }
-  
+
 /*//////////////////////////////////////////////////////////////////
 [ REBOOT ]*/
 *, *:before, *:after {

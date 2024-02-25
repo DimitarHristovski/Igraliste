@@ -85,16 +85,16 @@ body {
   overflow-x: hidden;
   font-family: "Cormorant Infant", serif;
 }
-
+ /* 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
+color: rgb(var(--foreground-rgb));
+   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb)); */
-}
+    rgb(var(--background-start-rgb)); 
+}*/
 
 a {
   color: inherit;

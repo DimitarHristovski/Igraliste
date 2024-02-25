@@ -114,7 +114,7 @@ const ProductDetail: NextPage<ProductDetailProps> = ({ products }) => {
         <h1>{products.price}</h1>
         <p>{products.description}</p>
         <div className="d-flex">
-          <p className="m-1 p-2 fs-22 bold-underline">Количина:</p>
+          <p className="m-1 p-2 fs-22 bold-underline">Amount:</p>
           <div className="d-flex">
             <button onClick={decrementQuantity} className="m-1 p-2 fs-22">
               -

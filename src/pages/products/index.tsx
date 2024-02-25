@@ -24,7 +24,7 @@ interface IndexProps {
 }
 const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
   const [view, setView] = useState<ActiveView>("index");
-  const [sortOption, setSortOption] = useState<any>("najnovo");
+  const [sortOption, setSortOption] = useState<any>("Newest");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<any>(false);
   const [combinedData, setCombinedData] = useState<any>(products);
@@ -55,9 +55,9 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
 
-          if (sortOption === "najnovo") {
+          if (sortOption === "Newest") {
             return dateB.getTime() - dateA.getTime(); // Newest to oldest
-          } else if (sortOption === "najstaro") {
+          } else if (sortOption === "Oldest") {
             return dateA.getTime() - dateB.getTime(); // Oldest to newest
           }
 
@@ -195,12 +195,12 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
                   <select
                     name="Filter"
                     id="Filter"
-                    className="m-1 bg-transparent"
+                    className="m-1 bg-transparent text-dark"
                     value={sortOption}
                     onChange={handleSortChange}
                   >
-                    <option value="najnovo">najnovo</option>
-                    <option value="najstaro">najstaro</option>
+                    <option value="Newest">Newest</option>
+                    <option value="Oldest">Oldest</option>
                   </select>
                 </div>
               </div>
@@ -213,9 +213,9 @@ const Index: NextPage<IndexProps> = ({ products }: IndexProps) => {
                 const dateA = new Date(a.date);
                 const dateB = new Date(b.date);
 
-                if (sortOption === "najnovo") {
+                if (sortOption === "Newest") {
                   return dateB.getTime() - dateA.getTime();
-                } else if (sortOption === "najstaro") {
+                } else if (sortOption === "Oldest") {
                   return dateA.getTime() - dateB.getTime();
                 }
 
