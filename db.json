@@ -1,48 +1,48 @@
 {
   "banner_content": [
     {
-      "text": "New Collection ",
+      "text": "Нова колекција ",
       "emojiSrc": "/images/emojione-monotone_eight-pointed-star.svg",
-      "collectionName": "Valentines Winter Collection 2023"
+      "collectionName": "Valentines Winter Collection 2024"
     },
     {
-      "text": "New Collection ",
+      "text": "Нова колекција ",
       "emojiSrc": "/images/emojione-monotone_eight-pointed-star.svg",
-      "collectionName": "Valentines Winter Collection 2023"
+      "collectionName": "Valentines Winter Collection 2024"
     },
     {
-      "text": "New Collection ",
+      "text": "Нова колекција ",
       "emojiSrc": "/images/emojione-monotone_eight-pointed-star.svg",
-      "collectionName": "Valentines Winter Collection 2023"
+      "collectionName": "Valentines Winter Collection 2024"
     }
   ],
   "categories": [
     {
-      "name": "New",
+      "name": "Novo",
       "link": "#"
     },
     {
       "name": "Vintage облека",
       "link": "#",
       "subcategories": [
-        { "name": "Blouse", "link": "/products" },
-        { "name": "Pants", "link": "/products" },
-        { "name": "Shorts", "link": "/products" },
-        { "name": "Dresses", "link": "/products" },
-        { "name": "Jackets", "link": "/products" },
-        { "name": "Underware", "link": "/products" }
+        { "name": "Блузи", "link": "/products" },
+        { "name": "Панталони", "link": "/products" },
+        { "name": "Здолништа / шорцеви", "link": "/products" },
+        { "name": "Фустани", "link": "/products" },
+        { "name": "Палта и јакни", "link": "/products" },
+        { "name": "Долна облека", "link": "/products" }
       ]
     },
     {
-      "name": "Brands",
+      "name": "Брендови",
       "link": "#",
       "subcategories": [
         { "name": "Pink Partywear", "link": "/products/brands/2" },
         { "name": "Factory Girl", "link": "/products/brands/1" },
         { "name": "Main Days", "link": "/products/brands/3" },
-        { "name": "Soft", "link": "/products" },
-        { "name": "Red", "link": "/products" },
-        { "name": "Ours", "link": "/products" },
+        { "name": "Нежно", "link": "/products" },
+        { "name": "Ред", "link": "/products" },
+        { "name": "Наш", "link": "/products" },
         { "name": "Зш да не", "link": "/Zsdane" },
         { "name": "Fraeil", "link": "/products/brands/4" },
         { "name": "Urma", "link": "/products/brands/1" },
@@ -52,11 +52,11 @@
       ]
     },
     {
-      "name": "Accessory",
+      "name": "Аксесоари",
       "link": "#",
       "subcategories": [
-        { "name": "Bags", "link": "/products/Accesories/2" },
-        { "name": "Jewelry", "link": "/products/Accesories/1" }
+        { "name": "Ташни", "link": "/products/Accesories/2" },
+        { "name": "Накит", "link": "/products/Accesories/1" }
       ]
     }
   ],
@@ -68,28 +68,28 @@
 
   "footerData": {
     "newsletter": {
-      "title": "Follow our news!",
-      "description": "Be part of our newsletter "
+      "title": "Следи ги нашите новости!",
+      "description": "Биди дел од нашиот newsletter и дознавај прва за промоции, попусти и нови колекции."
     },
     "subscriptionForm": {
-      "placeholder": "E-mail address:",
-      "buttonText": "Subscribe!"
+      "placeholder": "E-mail адреса:",
+      "buttonText": "Зачлени се!"
     },
     "links": {
       "about": {
-        "text": "About us",
+        "text": "За нас",
         "url": "/about"
       },
       "contact": {
-        "text": "Contact",
+        "text": "Контакт",
         "url": "/contact"
       },
       "storeLocator": {
-        "text": "Shop Locator",
+        "text": "Локатор на продавницата",
         "url": "/contact"
       },
       "faq": {
-        "text": "Frequently asked questions (FAQ)",
+        "text": "Често поставувани прашања (FAQ)",
         "url": "/FAQ"
       }
     },
@@ -105,60 +105,59 @@
         "desc": "igralishte.sk"
       }
     ],
-    "companyInfo": ["All rights reserved © 2023 igralishtesk.mk"]
+    "companyInfo": ["Сите права задржани © 2023 igralishtesk.mk"]
   },
   "contactInfo": {
-    "heading": "Contact",
+    "heading": "Kontakt",
     "image": "/images/icons/Vector (1).png",
     "address": {
-      "title": "Igraliste Debar Maalo",
-      "description": "Discover our other fashion pieces and collections that are not displayed on our website!",
-      "address": {
-        "street": "Kosturski Heroi No. 6/14, Debar Maalo, Skopje"
-      },
-      "phoneNumber": "+389 078 380 406",
-      "workingHours": "Monday - Friday 12:00 PM - 7:00 PM. Saturday 12:00 PM - 5:00 PM",
-      "buttonText": "Visit the store!"
+      "title": "Игралиште Дебар Маало",
+      "description": "Откриј ги нашите останати модни парчиња и колекции кои ги немаме изложено на нашата страна!",
+      "street": "Костурски Херои бр.6/14 Дебар Маало, Скопје"
+    },
+    "phoneNumber": "+ 389 078 380 406",
+    "workingHours": "Понеделник - Петок 12:00 - 19:00. Сабота 12:00 - 17:00",
+    "buttonText": "kon prodavnicata!"
   },
   "FAQ": {
     "title": "FAQ",
     "icon": "/images/icons/Vector (1).png",
     "items": [
       {
-        "question": "This is an example of questions that would be on the website? ",
+        "question": "Ова е примерок за прашања кои би биле на страната? ",
         "answer": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
       },
       {
-        "question": "This is an example of questions that would be on the website?",
+        "question": "Ова е примерок за прашања кои би биле на страната? ",
         "answer": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
       },
       {
-        "question": "This is an example of questions that would be on the website? ",
+        "question": "Ова е примерок за прашања кои би биле на страната? ",
         "answer": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
       },
       {
-        "question": "This is an example of questions that would be on the website?",
+        "question": "Ова е примерок за прашања кои би биле на страната? ",
         "answer": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
       }
     ]
   },
   "aboutUs": {
-    "title": "About us",
+    "title": "За нас",
     "icon": "/images/icons/Vector (1).png",
     "sections": [
       {
-        "title": "Our Story",
+        "title": "Нашата приказна",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ..."
       },
       {
-        "title": "Our Work",
+        "title": "Нашата работа",
         "content": "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ..."
       }
     ],
     "mainContent": [
       {
         "image": "/images/about us.png",
-        "heading": "Who are we?",
+        "heading": "Кои сме ние?",
         "paragraphs": [
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -166,7 +165,7 @@
       },
       {
         "image": "/images/contact.png",
-        "heading": "What we do?",
+        "heading": "Што правиме?",
         "paragraphs": [
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -179,49 +178,49 @@
     "content": [
       {
         "image": "/images/zshdane 1.png",
-        "heading": "The concept of @zshdane_ is based on several questions:",
+        "heading": "Концептот на @zshdane_ се базира на неколку прашања:",
+
         "questions": [
-          "Is there room for labeling and taboos in this outrageously unethical world?",
-          "Why is the culture of pretending more accepted than sincere resistance?",
-          "Should we be ashamed of our own just to keep others peaceful?",
-          "Will we make it?"
+          "Дали постои простор за етикетирања и табу во овој безобразно неетички свет?",
+          "Зошто фолирањето култура е поприфатено од искрениот отпор?",
+          "Дали треба да се срамиме од сопственото само за друг да биде мирен?",
+          "Дали ќе ни текне?"
         ]
       },
       {
-        "text": "Preserve the free spirit and be who you are, always."
+        "text": "Зачувај го слободниот дух и биди тоа што си с е к о г а ш ."
       },
       {
-        "text": "Check out the products at Zsh to see what we offer in the Playground. We have a wide selection of Pussy keychains that are cool and ultra-feminist, a.k.a. grl pwr."
+        "text": "Погледнете ги производите на Зш да не кои ги нудиме во Игралиште. Имаме доста голем избор на Pussy привезоци кои се кул и ултра феминистички, а.к.а. grl pwr."
       }
     ]
-    
   },
   "filter": {
     "title": "Filter",
     "icon": "/path/to/your/icon.png",
     "categories": [
       {
-        "name": "Blouse",
+        "name": "Блузи",
         "selected": false
       },
       {
-        "name": "Pants",
+        "name": "Панталони",
         "selected": false
       },
       {
-        "name": "Shorts",
+        "name": "Здолништа / шорцеви",
         "selected": false
       },
       {
-        "name": "Dresses",
+        "name": "Фустани",
         "selected": false
       },
       {
-        "name": "Jackets",
+        "name": "Палта и јакни",
         "selected": false
       },
       {
-        "name": "Underware",
+        "name": "Долна облека",
         "selected": false
       }
     ],
@@ -239,15 +238,15 @@
         "selected": false
       },
       {
-        "name": "Soft",
+        "name": "Нежно",
         "selected": false
       },
       {
-        "name": "Red",
+        "name": "Ред",
         "selected": false
       },
       {
-        "name": "Ours",
+        "name": "Наш",
         "selected": false
       },
       {
@@ -273,11 +272,11 @@
     ],
     "accessories": [
       {
-        "name": "Jewelry",
+        "name": "Накит",
         "selected": false
       },
       {
-        "name": "Bags",
+        "name": "Ташни",
         "selected": false
       }
     ],
@@ -321,19 +320,19 @@
         "selected": false
       },
       {
-        "name": "500 - 1000 den.",
+        "name": "500 - 1000 ден.",
         "selected": false
       },
       {
-        "name": "1500 - 2000 den.",
+        "name": "1500 - 2000 ден.",
         "selected": false
       },
       {
-        "name": "2000 - 2500 den.",
+        "name": "2000 - 2500 ден.",
         "selected": false
       },
       {
-        "name": "Над 2500 den.",
+        "name": "Над 2500 ден.",
         "selected": false
       }
     ]
@@ -353,7 +352,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "02/15/2023",
       "brand": "Pink Partywear"
     },
@@ -372,7 +371,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "05/22/2022",
       "brand": "Pink Partywear"
     },
@@ -390,7 +389,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Dresses",
+      "type": "Фустани",
       "date": "11/07/2022",
       "brand": "Pink Partywear"
     },
@@ -408,7 +407,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "08/30/2023",
       "brand": "Gatta"
     },
@@ -426,7 +425,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "04/12/2022",
       "brand": "Gatta"
     },
@@ -444,7 +443,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "10/05/2023",
       "brand": "Gatta"
     },
@@ -462,7 +461,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Blouse",
+      "type": "Блузи",
       "date": "07/18/2022",
       "brand": "Gatta"
     },
@@ -480,7 +479,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Pants",
+      "type": "Панталони",
       "date": "07/18/2022",
       "brand": "Gatta"
     },
@@ -498,7 +497,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Shorts",
+      "type": "Здолништа / шорцеви",
       "date": "12/25/2022",
       "brand": "Gatta"
     },
@@ -516,7 +515,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Jackets",
+      "type": "Палта и јакни",
       "date": "09/09/2023",
       "brand": "Pink Partywear"
     },
@@ -534,7 +533,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Underware",
+      "type": "Долна облека",
       "date": "01/30/2022",
       "brand": "Factory Girl"
     },
@@ -553,7 +552,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Pants",
+      "type": "Панталони",
       "date": "07/18/2022",
       "brand": "Main Days"
     },
@@ -589,7 +588,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Jackets",
+      "type": "Палта и јакни",
       "date": "09/09/2023",
       "brand": "Beyond Green"
     },
@@ -607,7 +606,7 @@
       "maintenance": "Ова парче треба да се третира хемиски според инструкциите на етикетата.",
       "tags": ["ново", "vintage", "палта", "облека"],
       "link": "",
-      "type": "Underware",
+      "type": "Долна облека",
       "date": "01/30/2022",
       "brand": "Candle Nest"
     },
@@ -627,7 +626,7 @@
       "maintenance": "Ова фрижидерче се одржува си чистење со влажна крпа.",
       "tags": ["локални брендови", "brands", "urma"],
       "link": "",
-      "type": "Fridge",
+      "type": "фрижидер",
       "date": "06/14/2023",
       "brand": "Urma"
     },
@@ -647,7 +646,7 @@
       "maintenance": "Ова Накит се одржува си чистење со влажна крпа.",
       "tags": ["локални брендови", "accesories", "urma"],
       "link": "",
-      "type": "Jewelry",
+      "type": "Накит",
       "date": "08/22/2023",
       "brand": "Urma"
     },
@@ -667,7 +666,7 @@
       "maintenance": "Ова Ташна се одржува си чистење со влажна крпа.",
       "tags": ["локални брендови", "accesories", "Pinc Partywear"],
       "link": "/products/Accesories/2",
-      "type": "Bags",
+      "type": "Ташни",
       "date": "05/03/2022",
       "brand": "Urma"
     },
@@ -687,7 +686,7 @@
       "maintenance": "Ова Накит се одржува си чистење со влажна крпа.",
       "tags": ["локални брендови", "accesories", "urma"],
       "link": "",
-      "type": "Jewelry",
+      "type": "Накит",
       "date": "08/22/2023",
       "brand": "Urma"
     },
@@ -707,7 +706,7 @@
       "maintenance": "Ова Ташна се одржува си чистење со влажна крпа.",
       "tags": ["локални брендови", "accesories", "Pinc Partywear"],
       "link": "",
-      "type": "Bags",
+      "type": "Ташни",
       "date": "05/03/2022",
       "brand": "Urma"
     }
@@ -739,5 +738,4 @@
       "price": 4000
     }
   ]
-}
 }
