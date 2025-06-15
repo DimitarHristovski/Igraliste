@@ -106,3 +106,9 @@ a {
     color-scheme: dark;
   }
 }
+
+@media screen and (min-width: 430px) {
+  body > *  {
+    display: none;
+  }
+}
